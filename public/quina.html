@@ -5,17 +5,17 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="index.css"/>
-    <meta name="description"content="Web site created using create-react-app"/>   
-    <title>Loterias uMov.me</title>    
+    <meta name="description"content="Web site created using create-react-app"/>    
+    <title>Loterias uMov.me</title>   
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">  
   </head>
   <body class="App-body">   
     <div id="root"></div>
-    <div className="Mega">            
-            <div class="collapse.show" id="Mega">
-            <div class="divNumerosMega">
-        <p><center><strong><h1>Loterias uMov.me - Mega Sena</h1></strong></center></p>
+    <div className="Quina">          
+            <div class="collapse.show" id="Quina">
+            <div class="divNumerosQuina">
+        <p><center><strong><h1>Loterias uMov.me - Quina</h1></strong></center></p>
         <center>
         <div className="divCartela">        
         <table>
@@ -95,7 +95,31 @@
             <td><button class="btn2"onClick="insert('57')">57</button></td>
             <td><button class="btn2"onClick="insert('58')">58</button></td>
             <td><button class="btn2"onClick="insert('59')">59</button></td>
-            <td><button class="btn2" onClick="insert('60')">60</button></td>
+            <td><button class="btn2"onClick="insert('60')">60</button></td>
+          </tr>
+          <tr>
+            <td><button class="btn2"onClick="insert('61')">61</button></td>
+            <td><button class="btn2"onClick="insert('62')">62</button></td>
+            <td><button class="btn2"onClick="insert('63')">63</button></td>
+            <td><button class="btn2"onClick="insert('64')">64</button></td>
+            <td><button class="btn2"onClick="insert('65')">65</button></td>
+            <td><button class="btn2"onClick="insert('66')">66</button></td>
+            <td><button class="btn2"onClick="insert('67')">67</button></td>
+            <td><button class="btn2"onClick="insert('68')">68</button></td>
+            <td><button class="btn2"onClick="insert('69')">69</button></td>
+            <td><button class="btn2"onClick="insert('70')">70</button></td>
+          </tr>
+          <tr>
+            <td><button class="btn2"onClick="insert('71')">71</button></td>
+            <td><button class="btn2"onClick="insert('72')">72</button></td>
+            <td><button class="btn2"onClick="insert('73')">73</button></td>
+            <td><button class="btn2"onClick="insert('74')">74</button></td>
+            <td><button class="btn2"onClick="insert('75')">75</button></td>
+            <td><button class="btn2"onClick="insert('76')">76</button></td>
+            <td><button class="btn2"onClick="insert('77')">77</button></td>
+            <td><button class="btn2"onClick="insert('78')">78</button></td>
+            <td><button class="btn2"onClick="insert('79')">79</button></td>
+            <td><button class="btn2"onClick="insert('80')">80</button></td>
           </tr>
           </center>
         </table>
@@ -104,70 +128,42 @@
         </center>
         </div>
         <center><span><strong>Você jogou as seguintes dezenas:</strong></span>
-          <div id="resultado"></div></center>        
+          <div id="resultado"></div></center>       
         <center>
           <tr>
-          <input type="button" id="Pagamento" class="btn" onclick="calcular()" value="Valor do Jogo" href="#ValorJogo"></input>
-          <input type="button" id="Pagamento" class="btn" onclick="pagamento()" value="Confirmar Jogo" href="#Pagamento"></input>
-          <input type="button" id="Pagamento" class="btn" onclick="Clean()" value="Limpar Jogo" href="#Limpar"></input>
+          <input type="button" id="Pagamento" class="btn" onclick="calcular()" value="Valor do Jogo" href="#Pagamento"></input>
+          <input type="button" id="Pagamento" class="btn" onclick="arrayz()" value="Confirmar Jogo" href="#Pagamento"></input>
+          <input type="button" id="Pagamento" class="btn" onclick="Clean()" value="Limpar Jogo" href="#Pagamento"></input>
           </tr>
         </center>
   <script>
-      var teste = 0;
-      function insert(num) {
-      teste++;
-      console.log(teste);
+    function insert(num) {
       const selecionados = 'resultado';
       const numero = document.getElementById('resultado').innerHTML;
-      document.getElementById('resultado').innerHTML = numero + " - " + num;  
+      document.getElementById('resultado2').innerHTML = numero + num;  
+    }
+    function calcular(insert){
+      
+      const selecionados = ['resultado'];
+      
+      if(selecionados.length >= 1){
+        return alert ("Valor do Jogo: R$ 4,50");
       }
-        function calcular(insert){     
-          if(teste == 6){
-            return alert ("Valor do Jogo: R$ 4,50");
-          }
-          else if(teste == 7){
-            return alert ("Valor do Jogo: R$ 31,50");
-          }
-          else if(teste == 8){
-          return alert ("Valor do Jogo: R$ 126,00");
-          }
-          else if(teste == 9){
-          return alert ("Valor do Jogo: R$ 378,00");
-          }
-          else if(teste == 10){
-          return alert ("Valor do Jogo: R$ 945,00");
-          }
-          else if(teste == 11){
-          return alert ("Valor do Jogo: R$ 2079,00");
-          }
-          else if(teste == 12){
-          return alert ("Valor do Jogo: R$ 4158,00");
-          }
-          else if(teste == 13){
-          return alert ("Valor do Jogo: R$ 7722,00");
-          }
-          else if(teste == 14){
-          return alert ("Valor do Jogo: R$ 13513,50");
-          }
-          else if(teste == 15){
-          return alert ("Valor do Jogo: R$ 22522,50");
-          }
-        }
-        function Clean(){
-          document.getElementById('resultado').innerHTML = "";
-          teste = 0;
-        }   
+    }
+    function Clean(){
+      document.getElementById('resultado').innerHTML = "";
+    }
   </script>
-  </div>    
   </div>
   </div>
-  <script type="text/javascript" src="index.js"></script>
+  </div>
+    <script type="text/javascript" src="index.js"></script>
   </body>
   <footer class="footer">
-      <br/>
-      <center>
-        <img src="https://www.umov.me/wp-content/uploads/2020/06/Logo-uMovme-2020_00a7b1-RECOMENDADA.png.webp"/>;
-      </center>
-      <br/>
+    <br/>
+    <center>
+      <img src="https://www.umov.me/wp-content/uploads/2020/06/Logo-uMovme-2020_00a7b1-RECOMENDADA.png.webp"/>;
+    </center>
+    <br/>
   </footer>
 </html>
